@@ -1,0 +1,23 @@
+{
+  "scripts": {
+    "build": "webpack --mode production",
+    "watch": "webpack --watch --mode development",
+    "start": "webpack-dev-server --content-base dist",
+    "devserver": "npx webpack serve"
+  },
+  "dependencies": {
+    "@melloware/coloris": "^0.20.0"
+  },
+  "devDependencies": {
+    "sass": "^1.64.1",
+    "sass-loader": "^13.3.2",
+    "css-loader": "^6.8.1",
+    "eslint": "^8.45.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.27.5",
+    "style-loader": "^3.3.3",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
+  }
+}

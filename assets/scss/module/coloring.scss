@@ -1,0 +1,46 @@
+.coloring {
+  .color-container {
+    position: relative;
+  }
+
+  .clr-field {
+    button {
+      width: 100%;
+      aspect-ratio: 1;
+      height: auto;
+      top: 0;
+      transform: unset;
+    }
+  }
+
+  // Active state
+  [aria-current="true"],
+  [aria-current="true"] ~ button {
+    border-radius: 50%;
+  }
+
+  // Make transparent more obvious
+  input[value='transparent']~button::after{
+    background: repeating-linear-gradient(-45deg, var(--gray-light), var(--gray-light) 2px, var(--white) 1px, var(--white) 8px);
+  }
+
+  #color-palette {
+    --min: 2rem;
+    display: grid;
+    grid-gap: var(--gap);
+    /* min() with 100% prevents overflow
+    in extra narrow spaces */
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--min)), 1fr));
+
+    input {
+      width: 100%;
+      aspect-ratio: 1;
+      cursor: pointer;
+    }
+  }
+
+  p {
+    color: var(--gray-dark);
+    text-align: center;
+  }
+}
